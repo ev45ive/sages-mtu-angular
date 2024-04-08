@@ -7,12 +7,17 @@ import {
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { ButtonModule } from 'primeng/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
     BrowserModule,
+    ButtonModule,
+    BrowserAnimationsModule,
     AppRoutingModule
   ],
   providers: [provideClientHydration()],

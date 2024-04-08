@@ -8,10 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'mtu';
 
-  alert(msg = '') {
-    window.alert(msg);
-  }
 }
 
-// console.log();
-// window.alert()
