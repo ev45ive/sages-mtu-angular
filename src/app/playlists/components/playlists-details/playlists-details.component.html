@@ -15,6 +15,22 @@
   </dd>
 
   <dd
+    [ngStyle]="{
+      color: playlist.public ? 'red' : 'green'
+    }"
+  >
+    {{ playlist.public ? "Yes" : "No" }}
+  </dd>
+
+  <!-- [ngClass]="getClasses()" -->
+  <dd
+    [ngClass]="{
+        isPublic: playlist.public,
+        isPrivate: !playlist.public,
+    }"
+  ></dd>
+
+  <dd
     class="placki"
     [class.isPublic]="playlist.public"
     [class.isPrivate]="playlist.public == false"

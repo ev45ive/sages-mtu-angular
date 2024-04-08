@@ -12,6 +12,13 @@ export class PlaylistsDetailsComponent {
     public: false,
     description: 'Ala ma kota',
   };
+
+  getClasses() {
+    return {
+      isPublic: true,
+      isPrivate: false,
+    };
+  }
 }
 
 // object[prop] = val
