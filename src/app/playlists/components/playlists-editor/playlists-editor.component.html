@@ -1,15 +1,15 @@
-<pre>{{ playlist | json }}</pre>
+<!-- <pre>{{ playlist | json }}</pre> -->
 
 <div class="flex flex-col gap-3">
   <div>
     <label class="inline-block w-full">Name</label>
-    <input type="text" #nameRef pInputText [(ngModel)]="playlist.name" />
-
-    <!-- 
-        [ngModel]="playlist.name" 
-        (ngModelChange)="playlist.name = $event " -->
-    <!-- (input)="playlist.name = $any($event.target).value" -->
-
+    <input
+      type="text"
+      #nameRef
+      pInputText
+      [(ngModel)]="playlist.name"
+      (ngModelChange)="('zmiana!')"
+    />
     <p class="w-full text-center">{{ playlist.name.length }} / 100</p>
   </div>
 

@@ -10,7 +10,7 @@
   <dd>{{ playlist.name }}</dd>
 
   <dt>Public</dt>
-  <dd [style.color]="playlist.public ? 'red' : 'green'">
+  <!-- <dd [style.color]="playlist.public ? 'red' : 'green'">
     {{ playlist.public ? "Yes" : "No" }}
   </dd>
 
@@ -20,7 +20,7 @@
     }"
   >
     {{ playlist.public ? "Yes" : "No" }}
-  </dd>
+  </dd> -->
 
 <!-- 
    s = new NgStyle(<dd>) 
@@ -39,14 +39,14 @@
         isPrivate: !playlist.public,
     }"
   ></dd>
-
+<!-- 
   <dd
     class="placki"
     [class.isPublic]="playlist.public"
     [class.isPrivate]="playlist.public == false"
   >
     {{ playlist.public ? "Yes" : "No" }}
-  </dd>
+  </dd> -->
 
   <dt>Decription</dt>
   <dd>{{ playlist.description }}</dd>
