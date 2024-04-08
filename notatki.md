@@ -79,3 +79,11 @@ https://cssgridgarden.com/
 
 # Shared 
 ng g m shared -m playlists
+
+
+# Virtualize
+https://material.angular.io/components/table/overview
+
+https://material.angular.io/cdk/scrolling/overview#virtual-scrolling
+
+https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
