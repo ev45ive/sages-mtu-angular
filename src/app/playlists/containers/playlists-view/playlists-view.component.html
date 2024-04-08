@@ -1,16 +1,14 @@
-
 <div class="grid grid-cols-2">
   <div>
     <app-playlists-list />
   </div>
   <div>
-    {{mode}}
+    {{ mode }}
 
-    
-    <app-playlists-details />
-    <app-playlists-editor [hidden]="true" />
+    <app-playlists-details [hidden]="mode !== 'details'" />
+    <app-playlists-editor [hidden]="mode !== 'editor'" />
 
-    <p-button label="Details" severity="danger"  />
-    <p-button label="Edit" severity="primary" />
+    <p-button label="Details" severity="danger" (onClick)="showDetails()" />
+    <p-button label="Edit" severity="primary" (onClick)="showEditor()" />
   </div>
 </div>
