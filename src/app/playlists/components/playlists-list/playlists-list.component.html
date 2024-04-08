@@ -1,15 +1,19 @@
-
 <div class="grid grid-flow-row auto-rows-max hover:auto-rows-min">
 
+<ng-template ngFor [ngForOf]="playlists" 
+    let-playlist="$implicit"
+    let-i="index">
+
     <div>
-        <p>1. Playlist 123</p>
+        <p>{{i+1}}. {{playlist.name}}</p>
     </div>
-    
-    <div>
-        <p>2. Playlist 123</p>
-    </div>
-    
-    <div>
-        <p>3. Playlist 123</p>
-    </div>
-  </div>
+</ng-template>
+
+</div>
+
+
+<!-- <div ngFor="" ngForOf=""></div> -->
+
+<!-- for(let p of placki ){
+    p
+} -->

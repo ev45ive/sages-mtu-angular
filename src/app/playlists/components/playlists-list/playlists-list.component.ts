@@ -1,4 +1,7 @@
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+
+NgFor
 
 @Component({
   selector: 'app-playlists-list',
