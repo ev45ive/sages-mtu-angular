@@ -5,8 +5,16 @@
   <div>
     {{ mode }}
 
-    <app-playlists-details [hidden]="mode !== 'details'" />
-    <app-playlists-editor [hidden]="mode !== 'editor'" />
+    <!-- ERROR Error: NG0201: No provider for _TemplateRef found. Find more at https://angular.io/errors/NG0201 -->
+    <!-- <app-playlists-details [ngIf]="mode == 'details'" /> -->
+
+    <ng-template [ngIf]="mode == 'details'">
+      <app-playlists-details />
+    </ng-template>
+
+    <ng-template [ngIf]="mode == 'editor'">
+      <app-playlists-editor />
+    </ng-template>
 
     <p-button label="Details" severity="danger" (onClick)="showDetails()" />
     <p-button label="Edit" severity="primary" (onClick)="showEditor()" />
