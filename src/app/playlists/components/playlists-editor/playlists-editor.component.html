@@ -1,18 +1,18 @@
-<pre>{{playlist | json }}</pre>
+<pre>{{ playlist | json }}</pre>
 
 <div class="flex flex-col gap-3">
   <div>
     <label class="inline-block w-full">Name</label>
-    <input type="text" pInputText />
+    <input type="text" pInputText [value]="playlist.name" />
   </div>
 
   <div>
-    <p-checkbox></p-checkbox>
+    <input type="checkbox" [checked]="true" />
     <label class="ps-2">Public</label>
   </div>
 
   <div>
-    <label class="inline-block w-full">Name</label>
-    <textarea type="text" pInputTextarea></textarea>
+    <label class="inline-block w-full">Description</label>
+    <textarea type="text" pInputTextarea [value]="playlist.description"></textarea>
   </div>
 </div>
