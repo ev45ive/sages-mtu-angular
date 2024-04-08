@@ -22,7 +22,17 @@
     {{ playlist.public ? "Yes" : "No" }}
   </dd>
 
+<!-- 
+   s = new NgStyle(<dd>) 
+   s.ngStyle = {
+    color: playlist.public ? 'red' : 'green'
+   }
+   s.ngDoCheck()
+ -->
+
+
   <!-- [ngClass]="getClasses()" -->
+  <!-- [class]="{x:1}" -->
   <dd
     [ngClass]="{
         isPublic: playlist.public,
