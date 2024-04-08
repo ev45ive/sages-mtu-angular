@@ -3,19 +3,18 @@
 <div class="flex flex-col gap-3">
   <div>
     <label class="inline-block w-full">Name</label>
-    <input
-      type="text"
-      #nameRef
-      pInputText
-      [ngModel]="playlist.name" (ngModelChange)="playlist.name = $event "
-      />
-      <!-- (input)="playlist.name = $any($event.target).value" -->
+    <input type="text" #nameRef pInputText [(ngModel)]="playlist.name" />
+
+    <!-- 
+        [ngModel]="playlist.name" 
+        (ngModelChange)="playlist.name = $event " -->
+    <!-- (input)="playlist.name = $any($event.target).value" -->
 
     <p class="w-full text-center">{{ playlist.name.length }} / 100</p>
   </div>
 
   <div>
-    <p-checkbox [ngModel] />
+    <p-checkbox [binary]="true" [(ngModel)]="playlist.public" />
     <label class="ps-2">Public</label>
   </div>
 
@@ -24,7 +23,7 @@
     <textarea
       type="text"
       pInputTextarea
-      [ngModel]="playlist.description"
+      [(ngModel)]="playlist.description"
     ></textarea>
   </div>
 </div>
