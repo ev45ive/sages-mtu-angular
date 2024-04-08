@@ -8,7 +8,8 @@ import { PlaylistsListComponent } from './components/playlists-list/playlists-li
 import { PlaylistsDetailsComponent } from './components/playlists-details/playlists-details.component';
 import { PlaylistsEditorComponent } from './components/playlists-editor/playlists-editor.component';
 
-
+import { CheckboxModule } from 'primeng/checkbox';
+import { SharedModule } from '../shared/shared.module'
 @NgModule({
   declarations: [
     PlaylistsComponent,
@@ -19,7 +20,8 @@ import { PlaylistsEditorComponent } from './components/playlists-editor/playlist
   ],
   imports: [
     CommonModule,
-    PlaylistsRoutingModule
+    PlaylistsRoutingModule,
+    SharedModule
   ]
 })
 export class PlaylistsModule { }

@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    ButtonModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
