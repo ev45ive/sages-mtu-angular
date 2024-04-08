@@ -4,6 +4,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule} from 'primeng/inputtextarea';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [],
@@ -13,12 +14,14 @@ import { InputTextareaModule} from 'primeng/inputtextarea';
     ButtonModule,
     InputTextModule,
     InputTextareaModule,
+    FormsModule
   ],
   exports: [
     CheckboxModule, 
     ButtonModule,
     InputTextModule,
     InputTextareaModule,
+    FormsModule
   ],
 })
 export class SharedModule {}
