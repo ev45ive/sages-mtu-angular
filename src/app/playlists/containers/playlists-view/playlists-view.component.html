@@ -8,13 +8,27 @@
     <!-- ERROR Error: NG0201: No provider for _TemplateRef found. Find more at https://angular.io/errors/NG0201 -->
     <!-- <app-playlists-details [ngIf]="mode == 'details'" /> -->
 
-    <ng-template [ngIf]="mode == 'details'">
+    <!-- <ng-template [ngTemplateOutlet]="getActiveTpl()"></ng-template> -->
+    
+
+    <ng-template [ngIf]="mode == 'details'" [ngIfThen]="detailsTpl" [ngIfElse]="editorTpl"/>
+    
+    <ng-template #detailsTpl>
       <app-playlists-details />
     </ng-template>
-
-    <ng-template [ngIf]="mode == 'editor'">
+    
+    <ng-template #editorTpl>
       <app-playlists-editor />
     </ng-template>
+
+    <!-- 
+      <ng-template [ngIf]="mode == 'details'">
+        <app-playlists-details />
+      </ng-template>
+      
+      <ng-template [ngIf]="mode == 'editor'">
+        <app-playlists-editor />
+      </ng-template> -->
 
     <p-button label="Details" severity="danger" (onClick)="showDetails()" />
     <p-button label="Edit" severity="primary" (onClick)="showEditor()" />
