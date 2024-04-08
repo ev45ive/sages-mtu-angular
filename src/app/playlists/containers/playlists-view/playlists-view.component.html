@@ -1,14 +1,12 @@
 <div class="grid grid-cols-2 gap-3">
   <div>
-    <app-playlists-list 
-      [items]="playlistsData" 
-      [selectedId]="selectedId" />
-      
-    <app-playlists-list 
-      [items]="playlistsData" 
-      [selectedId]="selectedId" />
-
-    <!-- <input type="text" [value]="selected.name" [placki]="123" /> -->
+    <app-playlists-list
+      [items]="playlistsData"
+      [(selectedId)]="selectedId"
+      (selectedIdChange)="selectPlaylistById($event)"
+    />
+    <!-- <input type="text" 
+      [value]="selected.name" (keyup)="$event.target" /> -->
   </div>
   <div>
     {{ mode }}

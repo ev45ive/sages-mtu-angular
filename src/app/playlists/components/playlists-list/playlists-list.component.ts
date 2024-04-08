@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Playlist } from './Playlist';
 import { PlaylistsViewComponent } from '../../containers/playlists-view/playlists-view.component';
 
@@ -11,14 +11,9 @@ export class PlaylistsListComponent {
   @Input('items') playlists: Playlist[] = [];
 
   @Input() selectedId = '';
+  @Output() selectedIdChange = new EventEmitter<Playlist['id']>();
 
   select(id: string) {
-    // this.selectedId = id; // Nono!
-    this.parent.selectPlaylistById(id);
+    this.selectedIdChange.emit(id);
   }
-
-  // Low cohesion, high coupling 
-  constructor(private parent: PlaylistsViewComponent) {}
-
-  // No provider for PlaylistsViewComponent!
 }

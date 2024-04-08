@@ -15,7 +15,7 @@ export class PlaylistsViewComponent {
   selected = this.playlistsData[0];
 
   selectPlaylistById(id: string) {
-    this.selectedId = id;
+    // this.selectedId = id;
     this.selected = this.playlistsData.find((p) => p.id == id)!;
   }
 
