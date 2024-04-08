@@ -68,5 +68,9 @@ ng g c playlists/components/playlists-details
 ng g c playlists/components/playlists-editor
 
 
-W
+# Flex + Grid
+http://www.flexboxdefense.com/
 
+https://flexboxfroggy.com/
+
+https://cssgridgarden.com/
