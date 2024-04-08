@@ -1,13 +1,21 @@
 <div class="grid grid-flow-row auto-rows-max">
   <div
     *ngFor="let playlist of playlists; index as i"
-    class="hover:bg-slate-500 text-white"
+    class="hover:bg-slate-300 p-2"
+    [ngClass]="{
+      'text-white bg-blue-600 hover:bg-blue-400': playlist.id === selectedId
+    }"
+    (click)="select(playlist.id)"
   >
-    <p>{{ i + 1 }}. {{ playlist.name }}</p>
-  </div>
+  
+  <p>{{ i + 1 }}. {{ playlist.name }}</p>
+</div>
 </div>
 
-{{selectedId}}
+{{ selectedId }}
+<!-- [class.text-white]="playlist.id === selectedId"
+[class.bg-blue-600]="playlist.id === selectedId" -->
+
 <!-- TODO: bg-blue-600 ?? -->
 
 <!-- <ng-template
