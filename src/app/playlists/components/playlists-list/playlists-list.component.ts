@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Playlist } from './Playlist';
+import { PlaylistsViewComponent } from '../../containers/playlists-view/playlists-view.component';
 
 @Component({
   selector: 'app-playlists-list',
@@ -10,9 +11,10 @@ export class PlaylistsListComponent {
   
   @Input('items') playlists: Playlist[] = [];
   
-  selectedId = '';
+  @Input() selectedId = '';
 
   select(id: string) {
     this.selectedId = id;
   }
+
 }
