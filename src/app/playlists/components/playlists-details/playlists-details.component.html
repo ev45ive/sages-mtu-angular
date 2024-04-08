@@ -10,7 +10,17 @@
   <dd>{{ playlist.name }}</dd>
 
   <dt>Public</dt>
-  <dd>{{ playlist.public ? "Yes" : "No" }}</dd>
+  <dd [style.color]="playlist.public ? 'red' : 'green'">
+    {{ playlist.public ? "Yes" : "No" }}
+  </dd>
+
+  <dd
+    class="placki"
+    [class.isPublic]="playlist.public"
+    [class.isPrivate]="playlist.public == false"
+  >
+    {{ playlist.public ? "Yes" : "No" }}
+  </dd>
 
   <dt>Decription</dt>
   <dd>{{ playlist.description }}</dd>
