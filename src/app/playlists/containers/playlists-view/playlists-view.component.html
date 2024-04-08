@@ -1,24 +1,26 @@
-<div class="grid grid-cols-2  gap-3 ">
+<div class="grid grid-cols-2 gap-3">
   <div>
-    <app-playlists-list />
+    
+    <app-playlists-list [items]="playlistsData" />
+
+    <!-- <input type="text" [value]="selected.name" [placki]="123" /> -->
+
   </div>
   <div>
     {{ mode }}
 
     <!-- {{text}} [props] #ref (event) |pipe *template -->
 
-
     <ng-container [ngSwitch]="mode">
-      <app-playlists-details *ngSwitchDefault/>
-      <app-playlists-editor  *ngSwitchCase="'editor'"/>
+      <app-playlists-details *ngSwitchDefault />
+      <app-playlists-editor *ngSwitchCase="'editor'" />
     </ng-container>
-    
 
     <!-- ERROR Error: NG0201: No provider for _TemplateRef found. Find more at https://angular.io/errors/NG0201 -->
     <!-- <app-playlists-details [ngIf]="mode == 'details'" /> -->
 
     <!-- <ng-template [ngTemplateOutlet]="getActiveTpl()"></ng-template> -->
-    
+
     <!-- <ng-template [ngIf]='...`' -->
     <!-- <ng-container placki *ngIf="mode == 'details'; then detailsTpl; else  editorTpl"  />
 

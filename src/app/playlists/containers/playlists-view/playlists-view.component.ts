@@ -9,8 +9,10 @@ import { mockPlaylists } from '../../components/playlists-list/mockPlaylists';
 export class PlaylistsViewComponent {
   mode: 'details' | 'editor' = 'details';
   
-  playlists = mockPlaylists;
+  playlistsData = mockPlaylists;
   selectedId = '234';
+
+  selected = this.playlistsData[0]
 
   showDetails() {
     this.mode = 'details';

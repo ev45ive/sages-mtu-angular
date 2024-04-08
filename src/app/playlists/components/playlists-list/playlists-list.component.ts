@@ -1,6 +1,4 @@
-import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
-import { mockPlaylists } from './mockPlaylists';
+import { Component, Input } from '@angular/core';
 import { Playlist } from './Playlist';
 
 @Component({
@@ -9,10 +7,9 @@ import { Playlist } from './Playlist';
   styleUrl: './playlists-list.component.scss',
 })
 export class PlaylistsListComponent {
-  // playlists: Playlist[] | undefined
-  // playlists?: Playlist[] 
   
-  playlists: Playlist[] = []
+  @Input('items') playlists: Playlist[] = [];
+  
   selectedId = '';
 
   select(id: string) {
