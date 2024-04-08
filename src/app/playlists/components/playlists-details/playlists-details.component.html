@@ -1,14 +1,17 @@
-
-
 <!-- dl>(dt{Name}+dd{PLacki})*3 -->
 
-<dl class="flex flex-col gap-3">
-    <dt>Name</dt>
-    <dd>PLacki</dd>
- 
-    <dt>Public</dt>
-    <dd>Yes</dd>
- 
-    <dt>Decription</dt>
-    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolorem, quasi quaerat minus veniam tempore sapiente at ut alias voluptas reiciendis, aperiam aspernatur dolor qui possimus reprehenderit pariatur. Aut, quidem!</dd>
+<dl
+  [title]="playlist.name"
+  class="flex flex-col gap-3"
+  id="playlist_{{ playlist.id }}"
+  [attr.data-playlist-id]="playlist.id"
+>
+  <dt>Name</dt>
+  <dd>{{ playlist.name }}</dd>
+
+  <dt>Public</dt>
+  <dd>{{ playlist.public ? "Yes" : "No" }}</dd>
+
+  <dt>Decription</dt>
+  <dd>{{ playlist.description }}</dd>
 </dl>

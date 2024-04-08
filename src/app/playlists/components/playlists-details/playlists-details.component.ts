@@ -13,3 +13,5 @@ export class PlaylistsDetailsComponent {
     description: 'Ala ma kota',
   };
 }
+
+// object[prop] = val
