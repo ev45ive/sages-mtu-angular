@@ -11,8 +11,12 @@
     <!-- <ng-template [ngTemplateOutlet]="getActiveTpl()"></ng-template> -->
     
 
-    <ng-template [ngIf]="mode == 'details'" [ngIfThen]="detailsTpl" [ngIfElse]="editorTpl"/>
     
+    <!-- <ng-template [ngIf]='...`' -->
+    <ng-container placki *ngIf="mode == 'details'; then detailsTpl; else  editorTpl"  />
+
+    <ng-template [ngIf]="mode == 'details'" [ngIfThen]="detailsTpl" [ngIfElse]="editorTpl" />
+      
     <ng-template #detailsTpl>
       <app-playlists-details />
     </ng-template>
