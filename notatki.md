@@ -52,3 +52,21 @@ ng new --help
 
 ng new mtu --directory "." --standalone false --routing --style scss
 ng new mtu --directory "." --standalone false
+
+# Schematic / Generator
+ng g --help
+ng g component --help
+ng g module --help
+
+ng g m --help
+
+ng g m  playlists -m app --routing --route "playlists"
+ng g c playlists/containers/playlists-view
+
+ng g c playlists/components/playlists-list
+ng g c playlists/components/playlists-details
+ng g c playlists/components/playlists-editor
+
+
+W
+
