@@ -1,19 +1,25 @@
-<div class="grid grid-flow-row auto-rows-max hover:auto-rows-min">
-  <ng-template
-    ngFor
-    [ngForOf]="playlists"
-    let-playlist="$implicit"
-    let-i="index"
+<div class="grid grid-flow-row auto-rows-max">
+  <div
+    *ngFor="let playlist of playlists; index as i"
+    class="hover:bg-slate-500 text-white"
   >
-    <div>
-      <p>{{ i + 1 }}. {{ playlist.name }}</p>
-    </div>
-  </ng-template>
-
-  <div *ngFor="let playlist of playlists; index as i">
     <p>{{ i + 1 }}. {{ playlist.name }}</p>
   </div>
 </div>
+
+{{selectedId}}
+<!-- TODO: bg-blue-600 ?? -->
+
+<!-- <ng-template
+  ngFor
+  [ngForOf]="playlists"
+  let-playlist="$implicit"
+  let-i="index"
+>
+  <div>
+    <p>{{ i + 1 }}. {{ playlist.name }}</p>
+  </div>
+</ng-template> -->
 
 <!-- <div ngFor="" ngForOf=""></div> -->
 
